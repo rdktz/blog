@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://blog.umbrait.usermd.net/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.3</priority>
+        <lastmod>2019-05-31</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.umbrait.usermd.net/blog/2019/05/31/first-post/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2019-05-31</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.umbrait.usermd.net/blog/2019/05/31/my-first-test-blog-post/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2019-05-31</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.umbrait.usermd.net/page/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2019-05-31</lastmod>
+    </url>
+</urlset>
+
+

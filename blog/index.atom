@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://blog.umbrait.usermd.net/blog/</id>
+    <title>My Statocles Site</title>
+    <updated>2019-05-31T00:00:00Z</updated>
+    <link href="http://blog.umbrait.usermd.net/blog/index.atom" rel="self" />
+    <link href="http://blog.umbrait.usermd.net/blog/" rel="alternate" />
+    <generator version="0.093">Statocles</generator>
+
+    <entry>
+        <id>http://blog.umbrait.usermd.net/blog/2019/05/31/my-first-test-blog-post/</id>
+        <title>My first test blog post</title>
+        <link href="http://blog.umbrait.usermd.net/blog/2019/05/31/my-first-test-blog-post/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Markdown content goes here.</p>
+
+<p>Testing <em>Statocles</em>
+-one
+-two
+-three</p>
+
+<p>How does this <em>look</em>?</p>
+
+<h1>RK</h1>
+
+<hr>
+
+
+
+        ]]></content>
+        <updated>2019-05-31T00:00:00Z</updated>
+    </entry>
+    <entry>
+        <id>http://blog.umbrait.usermd.net/blog/2019/05/31/first-post/</id>
+        <title>First Post</title>
+        <link href="http://blog.umbrait.usermd.net/blog/2019/05/31/first-post/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <h1>Welcome To Your Blog</h1>
+
+<p>This is your first post. To edit this post, open up /blog/2019/05/31/first-post/index.markdown
+in your text editor.</p>
+
+<p><a href="http://preaction.me/statocles/pod/Statocles/Help/Content">Check the documentation for how to write Statocles
+content</a></p>
+
+
+
+        ]]></content>
+        <updated>2019-05-31T00:00:00Z</updated>
+    </entry>
+</feed>
+
