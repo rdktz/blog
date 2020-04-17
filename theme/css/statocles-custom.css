@@ -6,14 +6,15 @@
 body {
     /* Raleway looks terrible, and in some cases is hard to read */
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  	background-image: url("../tramwaj_nh_kadr_kol_min.jpg");
+  	background-image: url("../img/tramwaj_nh_kadr_kol_min.jpg");
   	background-repeat: no-repeat;
-  	background-position: right top;
+  	background-position: left top;
+	background-size: cover; /* Resize the background image to cover the entire container */
   	background-attachment: fixed;
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 3.0em;
 	/*color: #FF8BC0; */
 	color: #F99999;
 }
@@ -78,6 +79,7 @@ main header h1 {
 
 main header h1 a {
     text-decoration: none;
+	color: #F99999;
 }
 
 aside {

@@ -30,9 +30,14 @@ site:
     class: 'Statocles::Site'
 
     args:
+        # disquss plugin
+        data:
+            disqus:
+                shortname: 'nowynh'
 
         # title: This is the title of the site, shown in the <title> tag
-        title: 'My Statocles Site'
+        title: 'Nowy na Hucie'
+        subtitle: 'czyli o nowym mieszkańcu na starej Nowej Hucie'
 
         # base_url: This is the base URL the site will be deployed to. It
         # should be a full URL, and may contain a path, like:
@@ -58,6 +63,10 @@ site:
             # static: This app does no processing at all. Good for images
             static:
                 $ref: 'static_app'
+            # static: This app does no processing at all. Good for images
+            about:
+                $ref: 'about_app'
+
 
         # plugins: These are plugins that can add features and alter the
         # content of the site.
@@ -87,6 +96,10 @@ site:
             main:
                 - text: 'Blog'
                   href: '/'
+                - text: 'About me'
+                  href: '/about'
+                - text: 'Links'
+                  href: '/links'
 
         # deploy: This is the deploy object, used to deploy this site.
         deploy:
@@ -108,10 +121,15 @@ theme:
 
 # deploy: These are the settings for the site's deploy. See Statocles::Deploy::File
 # for a full list of attributes and what they do.
+#deploy:
+#    class: 'Statocles::Deploy::Git'
+#    args:
+#        branch: 'master'
 deploy:
-    class: 'Statocles::Deploy::Git'
+    class: 'Statocles::Deploy::File'
     args:
-        branch: 'master'
+        path: '/home/umbrait/domains/nowy.nowahuta.blog/public_html'
+
 
 #----------------------------------------------------------------------------
 # Applications
@@ -144,3 +162,10 @@ static_app:
     args:
         store: 'static'
         url_root: '/static'
+
+# blog_app: These are the settings for the blog application.
+about_app:
+    class: 'Statocles::App::Basic'
+    args:
+        store: 'about'
+        url_root: '/about'

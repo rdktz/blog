@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/theme/css/normalize.css" />
         <link rel="stylesheet" href="/theme/css/skeleton.css" />
-        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
+        <link rel="stylesheet" href="/theme/css/statocles-custom.css" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <title><%== $self->title ? $self->title . ' - ' : '' %><%== $site->title %></title>
         % if ( my $author = $self->author ) {
@@ -39,7 +39,7 @@
     <body>
         <header>
             <nav class="navbar">
-                <div class="container">
+                <div class="container_rk">
                     <a class="brand" href="/"><%= $site->title %></a>
                     % if ( my @nav_links = $site->nav( 'main' ) ) {
                     <ul>
@@ -55,15 +55,15 @@
             </nav>
             %= include 'site/header_after.html.ep'
         </header>
-        <div class="main container">
+        <div class="main container_rk">
             <div class="row">
-                <div class="nine columns">
+                <div class="nine columns" id="rcorners_rk">
                     <main>
                         <%= content %>
                     </main>
                 </div>
 
-                <div class="three columns sidebar">
+                <div class="three columns sidebar" id="rcorners_rk">
                     %= include 'site/sidebar_before.html.ep';
                     %= content 'tags';
                     %= content 'feeds';
@@ -73,8 +73,8 @@
         <footer>
             %= include 'site/footer.html.ep'
             <div class="container tagline">
-                <a href="http://preaction.me/statocles">Made with Statocles</a><br/>
-                <a href="http://www.perl.org">Powered by Perl</a>
+                <a class="tagline" href="http://preaction.me/statocles">Made with Statocles</a><br/>
+                <a class="tagline" href="http://www.perl.org">Powered by Perl</a>
             </div>
         </footer>
 

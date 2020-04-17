@@ -10,7 +10,7 @@
 
         <aside>
             <time datetime="<%= $page->date->strftime('%Y-%m-%d') %>">
-                Posted on <%= $page->date->strftime('%Y-%m-%d') %>
+                Dodano dnia: <%= $page->date->strftime('%Y-%m-%d') %>
             </time>
             % if ( $page->author ) {
                 <span class="author">
@@ -18,18 +18,18 @@
                 </span>
             % }
             % if ( $site->data->{disqus}{shortname} ) {
-            <a data-disqus-identifier="<%= $page->document->path %>" href="<%= $app->page_url( $page ) %>#disqus_thread">0 comments</a>
+            <a data-disqus-identifier="<%= $page->document->path %>" href="<%= $app->page_url( $page ) %>#disqus_thread">0 komentarzy</a>
             % }
         </aside>
 
-        <p class="tags">Tags:
+        <p class="tags">Tagi:
         % for my $tag ( $page->tags ) {
             <a href="<%= $tag->href %>" rel="tag"><%== $tag->text %></a>
         % }
         </p>
 
         % if ( $page->links( 'crosspost' ) ) {
-        <p>Originally posted as:
+        <p>Pierwotnie dodane jako:
             % for my $link ( $page->links( 'crosspost' ) ) {
                 <a href="<%= $link->href %>">
                     <em><%= $page->title %></em> on <%= $link->title %>.
@@ -43,7 +43,7 @@
     <%= $sections[0] %>
 
     % if ( @sections > 1 ) {
-        <p><a href="<%= $app->page_url( $page ) %>#section-2">Continue reading <%= $page->title %>...</a></p>
+        <p><a href="<%= $app->page_url( $page ) %>#section-2">Zobacz pełną treść postu <%= $page->title %>...</a></p>
     % }
 
 </article>
@@ -55,12 +55,12 @@
             <a class="button button-primary" rel="prev"
                 href="<%= $self->next %>"
             >
-                &larr; Older
+                &larr; Poprzedni
             </a>
         % }
         % else {
             <button disabled>
-                &larr; Older
+                &larr; Poprzedni
             </button>
         % }
     </li>
@@ -69,12 +69,12 @@
             <a class="button button-primary" rel="next"
                 href="<%= $self->prev %>"
             >
-                Newer &rarr;
+                Następny &rarr;
             </a>
         % }
         % else {
             <button disabled>
-                Newer &rarr;
+                Następny &rarr;
             </button>
         % }
     </li>
@@ -94,7 +94,7 @@
 
 % content tags => begin
     <nav id="tags">
-        <h1>Tags</h1>
+        <h1 class="sidebar">Tagi</h1>
         <ul class="list-inline">
         % for my $tag ( $app->tags ) {
             <li><a href="<%= $tag->href %>"><%== $tag->text %></a></li>
@@ -105,7 +105,7 @@
 
 % if ( my @links = $self->links( 'feed' ) ) {
     % content feeds => begin
-        <h1>Feeds</h1>
+        <h1 class="sidebar">Wersja dla czytników</h1>
         <ul class="list-inline">
             % for my $link ( @links ) {
             <li>

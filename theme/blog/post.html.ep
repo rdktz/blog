@@ -12,7 +12,7 @@
         % }
     </aside>
 
-    <p class="tags">Tags:
+    <p class="tags">Tagi:
     % for my $tag ( $self->tags ) {
         <a href="<%= $tag->href %>" rel="tag"><%== $tag->text %></a>
     % }
@@ -42,12 +42,12 @@
             <a class="button button-primary" rel="prev"
                 href="<%= $self->next %>"
             >
-                &larr; Older
+                &larr; Poprzedni
             </a>
         % }
         % else {
             <button disabled>
-                &larr; Older
+                &larr; Poprzedni
             </button>
         % }
     </li>
@@ -56,19 +56,19 @@
             <a class="button button-primary" rel="next"
                 href="<%= $self->prev %>"
             >
-                Newer &rarr;
+                Następny &rarr;
             </a>
         % }
         % else {
             <button disabled>
-                Newer &rarr;
+                Następny &rarr;
             </button>
         % }
     </li>
 </ul>
 
 % if ( $site->data->{disqus}{shortname} ) {
-<h1>Comments</h1>
+<h1>Komentarze</h1>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = '<%= $site->data->{disqus}{shortname} %>';
@@ -80,7 +80,7 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">Komentarze możliwe dzięki Disqus.</a></noscript>
 % }
 
 % content tags => begin
